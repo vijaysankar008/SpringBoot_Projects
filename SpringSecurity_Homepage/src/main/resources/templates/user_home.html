@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: #f4f4f4;
+            display: flex;
+        }
+
+        /* Sidebar styling */
+        .sidebar {
+            width: 250px;
+            background: #2c3e50;
+            color: #ecf0f1;
+            height: 100vh;
+            position: fixed;
+            padding-top: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 24px;
+            letter-spacing: 1px;
+        }
+        .sidebar a {
+            display: block;
+            padding: 15px 20px;
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 16px;
+            margin-bottom: 5px;
+            transition: background 0.3s;
+        }
+        .sidebar a:hover {
+            background: #34495e;
+        }
+
+        /* Main content styling */
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        /* Header styling */
+        .header {
+            background: #ffffff;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #333333;
+        }
+        .user-info {
+            display: flex;
+            align-items: center;
+        }
+        .user-info img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .user-info span {
+            font-size: 16px;
+            color: #333333;
+        }
+
+        /* Dashboard widgets */
+        .dashboard {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .widget {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            min-width: 250px;
+            max-width: calc(50% - 20px);
+        }
+        .widget h3 {
+            margin: 0;
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #333333;
+        }
+        .widget p {
+            font-size: 16px;
+            color: #777777;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Dashboard</h2>
+        <a href="#">Home</a>
+        <a href="#">Profile</a>
+        <a href="#">Messages</a>
+        <a href="#">Settings</a>
+        <a href="#">Logout</a>
+    </div>
+
+    <!-- Main content -->
+    <div class="main-content">
+        <!-- Header -->
+        <div class="header">
+            <h1>Welcome, User!</h1>
+            <div class="user-info">
+                <img src="https://via.placeholder.com/40" alt="User Avatar">
+                <span>User Name</span>
+            </div>
+        </div>
+
+        <!-- Dashboard widgets -->
+        <div class="dashboard">
+            <div class="widget">
+                <h3>Widget 1</h3>
+                <p>This is an example of a widget.</p>
+            </div>
+            <div class="widget">
+                <h3>Widget 2</h3>
+                <p>This is another example of a widget.</p>
+            </div>
+            <div class="widget">
+                <h3>Widget 3</h3>
+                <p>More content can go here.</p>
+            </div>
+            <div class="widget">
+                <h3>Widget 4</h3>
+                <p>Additional information here.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
