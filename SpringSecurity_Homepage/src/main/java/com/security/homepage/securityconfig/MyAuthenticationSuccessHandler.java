@@ -16,7 +16,7 @@ public class MyAuthenticationSuccessHandler extends SavedRequestAwareAuthenticat
 			Authentication authentication) throws ServletException, IOException {
 	    Boolean isAdmin= authentication.getAuthorities().stream()
 	    		.anyMatch(grandedAuthority->grandedAuthority.getAuthority().equals("ROLE_ADMIN"));
-	    if(isAdmin)
+	    if(Boolean.TRUE.equals(isAdmin))
 	    	setDefaultTargetUrl("/app/admin");
 	    else
 	    	setDefaultTargetUrl("/app/user");
